@@ -18,7 +18,7 @@ const Encabezado = styled.h1`
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        padding: 3rem 0;
+        padding: 2rem 0;
 `
 const Menu = styled.div`
         display: flex;
@@ -148,7 +148,7 @@ const Form = ({ cargarCategoria }) => {
                 inputRef={inputRefs.seccode}
                 inputStyle={errorMessages.seccode ? { borderBottom: '0.25rem solid red' } : { borderBottom: '' }}
             />
-            <p style={{ marginTop: '-32px', paddingBottom: '32px', fontSize: '12px', color: 'red', }}>{errorMessages.seccode}</p>
+            <p style={{ marginTop: '-32px',  fontSize: '12px', color: 'red', }}>{errorMessages.seccode}</p>
             <Menu>
                 {idContent ? <GuardarVideo valor="Actualizar" type='submit' /> : <GuardarVideo valor="Guardar" buttonOnClick={handleNewCat} />}
                 <BorrarVideo valor="Limpiar" buttonOnClick={handleClear} />
@@ -266,7 +266,7 @@ export const NewForm = ({ cargarVideo }) => {
                 inputRef={inputRefs.titulo}
                 inputStyle={errorMessages.titulo ? { borderBottom: '0.25rem solid red' } : { borderBottom: '' }}
             />
-            <p style={{ marginTop: '-32px', paddingBottom: '32px', fontSize: '12px', color: 'red', }}>{errorMessages.titulo}</p>
+            <p style={{ marginTop: '-32px',  fontSize: '12px', color: 'red', }}>{errorMessages.titulo}</p>
             <FieldText
                 imputName="linkVideo"
                 inputPlaceholder="Link Del Video"
@@ -276,7 +276,7 @@ export const NewForm = ({ cargarVideo }) => {
                 inputRef={inputRefs.linkVideo}
                 inputStyle={errorMessages.linkVideo ? { borderBottom: '0.25rem solid red' } : { borderBottom: '' }}
             />
-            <p style={{ marginTop: '-32px', paddingBottom: '32px', fontSize: '12px', color: 'red', }}>{errorMessages.linkVideo}</p>
+            <p style={{ marginTop: '-32px',  fontSize: '12px', color: 'red', }}>{errorMessages.linkVideo}</p>
             <FieldText
                 imputName="linkImagen"
                 inputPlaceholder="Link Imagen Del Video"
@@ -286,7 +286,7 @@ export const NewForm = ({ cargarVideo }) => {
                 inputRef={inputRefs.linkImagen}
                 inputStyle={errorMessages.linkImagen ? { borderBottom: '0.25rem solid red' } : { borderBottom: '' }}
             />
-            <p style={{ marginTop: '-32px', paddingBottom: '32px', fontSize: '12px', color: 'red', }}>{errorMessages.linkImagen}</p>
+            <p style={{ marginTop: '-32px',  fontSize: '12px', color: 'red', }}>{errorMessages.linkImagen}</p>
             <FieldSelect
                 selectPlaceholder="Escoja una categoria"
                 selectValue={formulario.categoria}
@@ -305,7 +305,7 @@ export const NewForm = ({ cargarVideo }) => {
                 inputRef={inputRefs.descripcion}
                 inputStyle={errorMessages.descripcion ? { borderBottom: '0.25rem solid red' } : { borderBottom: '' }}
             />
-            <p style={{ marginTop: '-32px', paddingBottom: '32px', fontSize: '12px', color: 'red', }}>{errorMessages.descripcion}</p>
+            <p style={{ marginTop: '-32px',  fontSize: '12px', color: 'red', }}>{errorMessages.descripcion}</p>
             <FieldText
                 imputName="seccode"
                 inputPlaceholder="Código de seguridad"
@@ -315,11 +315,11 @@ export const NewForm = ({ cargarVideo }) => {
                 inputRef={inputRefs.seccode}
                 inputStyle={errorMessages.seccode ? { borderBottom: '0.25rem solid red' } : { borderBottom: '' }}
             />
-            <p style={{ marginTop: '-32px', paddingBottom: '32px', fontSize: '12px', color: 'red', }}>{errorMessages.seccode}</p>
+            <p style={{ marginTop: '-32px',  fontSize: '12px', color: 'red', }}>{errorMessages.seccode}</p>
             <Menu>
                 {idContent ? <GuardarVideo valor="Guardar" buttonOnClick={handleEditVid} /> : <GuardarVideo valor="Nuevo Video" type='submit' />}
                 <BorrarVideo valor="Limpiar" buttonOnClick={handleClear} />
-                <Link to="/nuevacategoria"><NuevaCategoria valor="Nueva categoría" /></Link>
+                {/* <Link to="/nuevacategoria"><NuevaCategoria valor="Nueva categoría" /></Link> */}
             </Menu>
         </CatForm>
     );
